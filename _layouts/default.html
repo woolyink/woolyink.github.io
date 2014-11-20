@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	 <nav>
-			<a href="#" class="menu-toggle"  id="menu-toggle"><span class="i i-menu"></span></a>
-			{% assign pages = site.pages | sort:"nav-position"  %}
-			<ul class="nav">
-			  {% for p in pages %}
-			  	{% if p.nav != false %}
-					<li>
-						<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
-							{{ p.title }}
-						</a>
-					</li>
-			  	{% endif %}
-			  {% endfor %}
-			</ul>
-	</nav>
+{% include header.html %}
 <h1>{{ page.title }}</h1>
 <p>{{ page.content }}</p>
 

@@ -2,7 +2,22 @@
 # css
 ---
 
-//Imports
-@import "CSSWIZARDRY";
 
-h1{color:red;}
+// Variables
+
+$primary-colour: red;
+$secondary-colour: blue;
+
+
+
+//Imports
+@import "css-wizardry-grid";
+@import "base-styles";
+
+
+
+
+
+h1{
+	color: $primary-colour;
+}

@@ -1,0 +1,20 @@
+nav {
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline;
+			list-style-type: none;
+		}
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

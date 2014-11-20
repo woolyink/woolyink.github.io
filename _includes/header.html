@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<nav>
+<a href="#" class="menu-toggle"  id="menu-toggle"><span class="i i-menu"></span></a>
+{% assign pages = site.html_pages | sort:"nav-position"  %}
+<ul class="nav">
+{% for p in pages %}
+{% if p.nav != false %}
+<li>
+<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
+{{ p.title }}
+</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+</nav>
